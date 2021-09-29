@@ -1,0 +1,125 @@
+/*reset*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* custom properties */
+:root {
+  --fs-input: 3rem;
+  --fs-btn-numbers: 2rem;
+  --fs-btn: 1.25rem;
+  --fs-theme: 0.75rem;
+  --clr-btn: #434a59;
+  --clr-text: #ffffff;
+  --bg-btn: #eae3dc;
+  --hover-btn: #fffffe;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: #3a4663;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: var(--fs-btn-numbers);
+}
+
+/****main content****/
+main {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 6rem 0 6rem 0;
+}
+
+.main-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-theme);
+  color: var(--clr-text);
+}
+
+.main-title-text {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.main-title-text > p {
+  align-self: flex-end;
+  margin-right: 1.3rem;
+  padding-bottom: 0.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-theme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.main-theme-label {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  padding: 0.3rem;
+}
+
+.main-theme-input {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  background: #242d44;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+#radio1,
+#radio2,
+#radio3 {
+  opacity: 0;
+  width: 1.5rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.radio-control {
+  position: absolute;
+  left: 7%;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #d03f2f;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.radio-control:hover {
+  background-color: #f96b5b;
+}
+
+/* END MAIN TITLE */
+
+.input-user {
+  margin: 2rem 0 1.5rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
