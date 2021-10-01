@@ -70,15 +70,17 @@ main {
 .main-theme-label {
   display: flex;
   justify-content: space-between;
-  width: 85%;
   padding: 0.3rem;
+}
+
+.main-theme-label label:nth-child(2) {
+  margin: 0 20px 0 20px;
 }
 
 .main-theme-input {
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   margin-top: 0.3rem;
   padding: 0.3rem;
   background: #242d44;
@@ -89,7 +91,7 @@ main {
 #radio1,
 #radio2,
 #radio3 {
-  opacity: 0;
+  /* opacity: 0; */
   width: 1.5rem;
   height: 1rem;
   cursor: pointer;
@@ -97,7 +99,7 @@ main {
 
 .radio-control {
   position: absolute;
-  left: 7%;
+  /* left: 6%; */
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
