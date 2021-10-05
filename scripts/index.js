@@ -1,11 +1,11 @@
 let radio1 = document.getElementById('radio1');
 let radio2 = document.getElementById('radio2');
 let radio3 = document.getElementById('radio3');
-let radioControl = document.querySelector('.radio-control');
-
-let themeId = 0;
 let themeSwitcher = document.querySelectorAll('.theme-switcher');
+let radioControl = document.querySelector('.radio-control');
+let themeId = 0;
 
+// verify which themeSwitcher is checked, take his id if it's checked and save it in localStorage
 function getLocalStorage() {
   for (let i = 0; i < themeSwitcher.length; i++) {
     let storageThemeSwitcher = themeSwitcher[i];
@@ -22,11 +22,7 @@ function getLocalStorage() {
   }
 }
 
-if (localStorage.getItem('switchTheme') == null) {
-  radioControl.style.left = '6%';
-  getLocalStorage();
-}
-
+// verify the id of the localStorage and add style with attribute according to his id
 function switchTheme() {
   if (localStorage.getItem('switchTheme') === 'radio1') {
     radioControl.style.left = '6%';
@@ -40,8 +36,20 @@ function switchTheme() {
   }
 }
 
-switchTheme();
+// if localstorage is null call the function getLocalStorage and SwitchTheme else call the function switchTheme
+function verifyLocalStorage() {
+  if (localStorage.getItem('switchTheme') == null) {
+    radioControl.style.left = '6%';
+    getLocalStorage();
+    switchTheme();
+  } else {
+    switchTheme();
+  }
+}
 
+verifyLocalStorage();
+
+// call the function switchTheme and save themeId in localStorage when themeSwitcher change
 themeSwitcher.forEach((theme) => {
   theme.addEventListener('change', () => {
     themeId = theme.id;
