@@ -10,25 +10,20 @@ function getLocalStorage() {
   for (let i = 0; i < themeSwitcher.length; i++) {
     let storageThemeSwitcher = themeSwitcher[i];
     if (storageThemeSwitcher.checked) {
-      console.log('find');
       let storageThemeSwitcherId = storageThemeSwitcher.id;
-      console.log(storageThemeSwitcherId);
       if (storageThemeSwitcherId === 'radio1') {
         localStorage.setItem('switchTheme', storageThemeSwitcherId);
-        // radioControl.style.left = '6%';
       } else if (storageThemeSwitcherId === 'radio2') {
         localStorage.setItem('switchTheme', storageThemeSwitcherId);
-        // radioControl.style.left = '40%';
       } else if (storageThemeSwitcherId === 'radio3') {
         localStorage.setItem('switchTheme', storageThemeSwitcherId);
-        // radioControl.style.left = '75%';
       }
     }
   }
 }
 
 if (localStorage.getItem('switchTheme') == null) {
-  // console.log('localstorage null');
+  radioControl.style.left = '6%';
   getLocalStorage();
 }
 
