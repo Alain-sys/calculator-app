@@ -32,27 +32,32 @@
         </div>
       </div>
 
-      <input class="input-user" type="text" placeholder="0" />
+      <div class="calculator-grid">
+        <div class="output">
+          <div data-previous-operand class="previous-operand">140</div>
+          <div data-current-operand class="current-operand">140</div>
+        </div>
 
-      <div class="main-btn-grid">
-        <button type="button" class="main-btn" value="7">7</button>
-        <button type="button" class="main-btn" value="8">8</button>
-        <button type="button" class="main-btn" value="9">9</button>
-        <button type="button" class="main-btn" data-spe-char="del">DEL</button>
-        <button type="button" class="main-btn" value="4">4</button>
-        <button type="button" class="main-btn" value="5">5</button>
-        <button type="button" class="main-btn" value="6">6</button>
-        <button type="button" class="main-btn" data-spe-char="+">+</button>
-        <button type="button" class="main-btn" value="1">1</button>
-        <button type="button" class="main-btn" value="2">2</button>
-        <button type="button" class="main-btn" value="3">3</button>
-        <button type="button" class="main-btn" data-spe-char="-">-</button>
-        <button type="button" class="main-btn" data-spe-char=".">.</button>
-        <button type="button" class="main-btn" value="0">0</button>
-        <button type="button" class="main-btn" data-spe-char="/">/</button>
-        <button type="button" class="main-btn" data-spe-char="x">x</button>
-        <button type="button" class="main-btn btn-reset" data-spe-char="reset">RESET</button>
-        <button type="button" class="main-btn btn-result" data-spe-char="=">=</button>
+        <div class="calculator-btn">
+          <button data-number>7</button>
+          <button data-number>8</button>
+          <button data-number>9</button>
+          <button data-delete>DEL</button>
+          <button data-number>4</button>
+          <button data-number>5</button>
+          <button data-number>6</button>
+          <button data-operation>+</button>
+          <button data-number>1</button>
+          <button data-number>2</button>
+          <button data-number>3</button>
+          <button data-operation>-</button>
+          <button data-number>.</button>
+          <button data-number>0</button>
+          <button data-operation>/</button>
+          <button data-operation>x</button>
+          <button data-all-clear>RESET</button>
+          <button data-equals>=</button>
+        </div>
       </div>
     </main>
     <script src="scripts/index.js"></script>

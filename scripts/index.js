@@ -57,5 +57,3 @@ themeSwitcher.forEach((theme) => {
     switchTheme();
   });
 });
-
-let inputUser = document.querySelector('.input-user');
