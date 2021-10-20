@@ -132,6 +132,12 @@ main {
   color: var(--clr-text);
   outline: none;
   word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
 }
 
 .output div:nth-child(2) {
