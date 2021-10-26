@@ -112,6 +112,11 @@ class Calculator {
       default:
         return;
     }
+
+    if (equalsButton.click) {
+      this.previousOperandTextElement.innerText = `${this.previousOperand} ${this.operation} ${this.currentOperand} = ${computation}`;
+    }
+
     this.currentOperand = computation;
     this.operation = undefined;
     this.previousOperand = '';
@@ -121,6 +126,9 @@ class Calculator {
     this.currentOperandTextElement.innerText = this.currentOperand;
     if (this.operation != null) {
       this.previousOperandTextElement.innerText = `${this.previousOperand} ${this.operation}`;
+      if (this.previousOperandTextElement.innerText === `${this.previousOperand} ${this.operation}`) {
+        this.previousOperandTextElement.innerText += ` ${this.currentOperand}`;
+      }
     }
   }
 }
@@ -148,17 +156,17 @@ operationButtons.forEach((button) => {
   });
 });
 
-equalsButton.addEventListener('click', (button) => {
+equalsButton.addEventListener('click', () => {
   calculator.compute();
   calculator.updateDisplay();
 });
 
-allClearButton.addEventListener('click', (button) => {
+allClearButton.addEventListener('click', () => {
   calculator.clear();
   calculator.updateDisplay();
 });
 
-deleteButton.addEventListener('click', (button) => {
+deleteButton.addEventListener('click', () => {
   calculator.delete();
   calculator.updateDisplay();
 });
