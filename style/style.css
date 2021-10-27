@@ -162,6 +162,7 @@ main {
   box-shadow: inset 0px -4px 0px #b3a497;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .calculator-btn button:nth-child(4),
@@ -179,6 +180,10 @@ main {
 }
 
 .calculator-btn button:hover {
+  background-color: var(--hover-btn);
+}
+
+.calculator-btn button:focus {
   background-color: var(--hover-btn);
 }
 

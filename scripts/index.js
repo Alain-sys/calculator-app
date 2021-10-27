@@ -170,3 +170,41 @@ deleteButton.addEventListener('click', () => {
   calculator.delete();
   calculator.updateDisplay();
 });
+
+function buttonBlur() {
+  numberButtons.forEach((button) => {
+    button.blur();
+  });
+  operationButtons.forEach((button) => {
+    button.blur();
+  });
+  equalsButton.blur();
+  allClearButton.blur();
+  deleteButton.blur();
+}
+window.addEventListener('keydown', (button) => {
+  buttonBlur();
+  let buttonKey = button.key;
+  if (buttonKey === '*') {
+    buttonKey = 'x';
+  }
+  if ((buttonKey >= 0 && buttonKey <= 9) || buttonKey === '.') {
+    calculator.appendNumber(buttonKey);
+    calculator.updateDisplay();
+  } else if (buttonKey === '+' || buttonKey === '-' || buttonKey === 'x' || buttonKey === '/') {
+    if (buttonKey === '/') {
+      button.preventDefault();
+    }
+    calculator.chooseOperation(buttonKey);
+    calculator.updateDisplay();
+  } else if (buttonKey === '=' || buttonKey === 'Enter') {
+    calculator.compute();
+    calculator.updateDisplay();
+  } else if (buttonKey === 'Delete' || buttonKey === 'Escape') {
+    calculator.clear();
+    calculator.updateDisplay();
+  } else if (buttonKey === 'Backspace') {
+    calculator.delete();
+    calculator.updateDisplay();
+  }
+});
