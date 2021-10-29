@@ -25,12 +25,15 @@ function getLocalStorage() {
 // verify the id of the localStorage and add style with attribute according to his id
 function switchTheme() {
   if (localStorage.getItem('switchTheme') === 'radio1') {
+    document.querySelector('html').dataset['theme'] = '1';
     radioControl.style.left = '6%';
     radio1.setAttribute('checked', true);
   } else if (localStorage.getItem('switchTheme') === 'radio2') {
+    document.querySelector('html').dataset['theme'] = '2';
     radioControl.style.left = '40%';
     radio2.setAttribute('checked', true);
   } else if (localStorage.getItem('switchTheme') === 'radio3') {
+    document.querySelector('html').dataset['theme'] = '3';
     radioControl.style.left = '75%';
     radio3.setAttribute('checked', true);
   }

@@ -11,19 +11,87 @@
 :root {
   --fs-input: 3rem;
   --fs-btn-numbers: 2rem;
-  --fs-btn: 1.25rem;
+  --fs-previous-operand: 1.5rem;
   --fs-theme: 0.75rem;
-  --clr-btn: #434a59;
-  --clr-text: #ffffff;
+  --fs-btn: 1.25rem;
+}
+
+:root[data-theme='1'] {
+  --bg-body: #3a4663;
+  --bg-radio-control: #d03f2f;
+  --bg-output: #181f33;
+  --bg-calculator: #242d44;
   --bg-btn: #eae3dc;
+  --bg-btn-delete-all-clear: #647198;
+  --bg-btn-equals: #d03f2f;
+  --clr-text: #ffffff;
+  --clr-btn: #434a59;
+  --clr-previous-operand: rgba(255, 255, 255, 0.75);
+  --clr-btn-special: #ffffff;
+  --clr-btn-special-equals: #ffffff;
+  --hover-radio-control: #f96b5b;
   --hover-btn: #fffffe;
+  --hover-btn-delete-all-clear: #a2b2e1;
+  --hover-btn-equals: #f96b5b;
+  --bs-btn: inset 0px -4px 0px #b3a497;
+  --bs-btn-delete-all-clear: inset 0px -4px 0px #414e73;
+  --bs-btn-equals: inset 0px -4px 0px #93261a;
+}
+
+:root[data-theme='2'] {
+  --bg-body: #e6e6e6;
+  --bg-radio-control: #c85402;
+  --bg-output: #eeeeee;
+  --bg-calculator: #d2cdcd;
+  --bg-btn: #e5e4e1;
+  --bg-btn-delete-all-clear: #378187;
+  --bg-btn-equals: #c85402;
+  --clr-text: #36362c;
+  --clr-btn: #36362c;
+  --clr-previous-operand: rgba(54, 54, 44, 0.75);
+  --clr-btn-special: #ffffff;
+  --clr-btn-special-equals: #ffffff;
+  --hover-radio-control: #ff8a38;
+  --hover-btn: #ffffff;
+  --hover-btn-delete-all-clear: #62b5bc;
+  --hover-btn-equals: #ff8a38;
+  --bs-btn: inset 0px -4px 0px #a79e91;
+  --bs-btn-delete-all-clear: inset 0px -4px 0px #1b6066;
+  --bs-btn-equals: inset 0px -4px 0px #873901;
+}
+
+:root[data-theme='3'] {
+  --bg-body: #17062a;
+  --bg-radio-control: #00ded0;
+  --bg-output: #1e0936;
+  --bg-calculator: #1e0936;
+  --bg-btn: #331c4d;
+  --bg-btn-delete-all-clear: #56077c;
+  --bg-btn-equals: #00ded0;
+  --clr-text: #ffe53d;
+  --clr-btn: #ffe53d;
+  --clr-previous-operand: rgba(255, 229, 61, 0.75);
+  --clr-btn-special: #ffffff;
+  --clr-btn-special-equals: #1a2327;
+  --hover-radio-control: #93fff8;
+  --hover-btn: #6c34ac;
+  --hover-btn-delete-all-clear: #8631af;
+  --hover-btn-equals: #93fff8;
+  --bs-btn: inset 0px -4px 0px #881c9e;
+  --bs-btn-delete-all-clear: inset 0px -4px 0px #be15f4;
+  --bs-btn-equals: inset 0px -4px 0px #6cf9f1;
 }
 
 body {
   font-family: 'Spartan', sans-serif;
-  background-color: #3a4663;
+  background-color: var(--bg-body);
   display: flex;
   justify-content: center;
+  transition: 0.3s;
+}
+
+body button {
+  font-family: 'Spartan', sans-serif;
 }
 
 h1 {
@@ -44,6 +112,7 @@ main {
   justify-content: space-between;
   font-size: var(--fs-theme);
   color: var(--clr-text);
+  transition: 0.3s;
 }
 
 .main-title-text {
@@ -78,13 +147,13 @@ main {
   margin: 0 20px 0 20px;
 }
 
-.main-theme-input {
+.main-theme-ouput {
   position: relative;
   display: flex;
   justify-content: space-between;
   margin-top: 0.3rem;
   padding: 0.3rem;
-  background: #242d44;
+  background: var(--bg-calculator);
   border-radius: 13px;
   cursor: pointer;
 }
@@ -103,13 +172,13 @@ main {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #d03f2f;
+  background-color: var(--bg-radio-control);
   transition: all 0.2s ease;
   z-index: 2;
 }
 
 .radio-control:hover {
-  background-color: #f96b5b;
+  background-color: var(--hover-radio-control);
 }
 
 /****output user****/
@@ -126,18 +195,19 @@ main {
   align-items: flex-end;
   padding: 10px;
   margin-bottom: 1.5rem;
-  background-color: #181f33;
+  background-color: var(--bg-output);
   border: none;
   border-radius: 10px;
   color: var(--clr-text);
   outline: none;
   word-wrap: break-word;
   word-break: break-all;
+  transition: 0.3s;
 }
 
 .output .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 1.5rem;
+  color: var(--clr-previous-operand);
+  font-size: var(--fs-previous-operand);
 }
 
 .output div:nth-child(2) {
@@ -149,8 +219,9 @@ main {
   grid-template: 64px 64px 64px 64px 64px/ 1fr 1fr 1fr 1fr;
   padding: 1.25rem;
   gap: 24px 24px;
-  background-color: #242d44;
+  background-color: var(--bg-calculator);
   border-radius: 10px;
+  transition: 0.3s;
 }
 
 .calculator-btn > button {
@@ -159,24 +230,10 @@ main {
   color: var(--clr-btn);
   border: none;
   border-radius: 10px;
-  box-shadow: inset 0px -4px 0px #b3a497;
+  box-shadow: var(--bs-btn);
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.calculator-btn button:nth-child(4),
-.calculator-btn button:nth-child(17),
-.calculator-btn button:nth-child(18) {
-  font-size: var(--fs-btn);
-}
-
-.calculator-btn button:nth-child(17) {
-  grid-column: 1 / 3;
-}
-
-.calculator-btn button:nth-child(18) {
-  grid-column: 3 / 5;
 }
 
 .calculator-btn button:hover {
@@ -185,6 +242,44 @@ main {
 
 .calculator-btn button:focus {
   background-color: var(--hover-btn);
+}
+
+button[data-delete],
+button[data-all-clear],
+button[data-equals] {
+  font-size: var(--fs-btn);
+}
+
+button[data-delete] {
+  background-color: var(--bg-btn-delete-all-clear);
+  color: var(--clr-btn-special);
+  box-shadow: var(--bs-btn-delete-all-clear);
+}
+
+button[data-all-clear] {
+  grid-column: 1 / 3;
+  background-color: var(--bg-btn-delete-all-clear);
+  color: var(--clr-btn-special);
+  box-shadow: var(--bs-btn-delete-all-clear);
+}
+
+button[data-delete]:hover,
+button[data-delete]:focus,
+button[data-all-clear]:hover,
+button[data-all-clear]:focus {
+  background-color: var(--hover-btn-delete-all-clear);
+}
+
+button[data-equals] {
+  grid-column: 3 / 5;
+  background-color: var(--bg-btn-equals);
+  box-shadow: var(--bs-btn-equals);
+  color: var(--clr-btn-special-equals);
+}
+
+button[data-equals]:hover,
+button[data-equals]:focus {
+  background-color: var(--hover-btn-equals);
 }
 
 .attribution {
