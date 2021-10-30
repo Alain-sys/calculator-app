@@ -1,0 +1,29 @@
+@media all and (max-width: 768px) {
+  :root {
+    --fs-output: 2rem;
+    --fs-btn-numbers: 1.75rem;
+    --fs-previous-operand: 1rem;
+    --fs-btn: 1.25rem;
+  }
+  main {
+    width: 90%;
+    margin: 1.8rem 0 1.8rem 0;
+  }
+
+  .output {
+    min-height: 6rem;
+  }
+
+  .calculator-btn {
+    gap: 13px 13px;
+  }
+
+  .main-theme-label {
+    width: 62px;
+    padding-right: 5px;
+  }
+
+  .main-theme-ouput {
+    width: 71px;
+  }
+}
