@@ -38,8 +38,11 @@ Users should be able to:
 
 <details>
   <summary>Mobile</summary>
+  <p align="center">
     <img src="images/Mobile-calculator-app-theme-1.png" alt=""/>
     <img src="images/Mobile-calculator-app-theme-2.png" alt=""/>
+  </p>
+  <p align="center">
     <img src="images/Mobile-calculator-app-theme-3.png" alt=""/>
   </p>
 </details>
@@ -57,12 +60,8 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Media queries
+- Javascript
 
 ### What I learned
 
