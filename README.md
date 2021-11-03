@@ -49,8 +49,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site URL](https://alain-sys.github.io/calculator-app/)
+- [Solution URL]()
 
 ## My process
 
@@ -65,12 +65,16 @@ Users should be able to:
 
 ### What I learned
 
+I have learned more about js and more precisely about the class object and the local storage.
 
 ### Continued development
 
+I would like to progress in js and learn REACT 
 
 ### Useful resources
 
+- [MDN](https://developer.mozilla.org/fr/)
+- [Stackoverflow](https://stackoverflow.com/) 
 
 ## Author
 
@@ -78,4 +82,6 @@ Users should be able to:
 - Github - [Alain-sys](https://github.com/Alain-sys)
 
 ## Acknowledgments
+
+Thanks to [WebDevSimplified](https://github.com/WebDevSimplified) for his great [video on youtube](https://www.youtube.com/watch?v=j59qQ7YWLxw) which helped me a lot for this challenge.
 
