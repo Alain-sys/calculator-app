@@ -77,7 +77,7 @@ main {
   padding-right: 10px;
 }
 
-.main-theme-ouput {
+.main-theme-output {
   width: 90px;
   position: relative;
   display: flex;
@@ -215,7 +215,7 @@ button[data-equals]:focus {
 }
 
 /****media queries for desktop****/
-@media all and (min-width: 1440px) {
+@media all and (min-width: 1441px) {
   main {
     width: 33rem;
   }
