@@ -29,7 +29,20 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<details>
+  <summary>Desktop</summary>
+  <img src="images/Desktop-calculator-app-theme-1.png" alt=""/>
+  <img src="images/Desktop-calculator-app-theme-2.png" alt=""/>
+  <img src="images/Desktop-calculator-app-theme-3.png" alt=""/>
+</details>
+
+<details>
+  <summary>Mobile</summary>
+    <img src="images/Mobile-calculator-app-theme-1.png" alt=""/>
+    <img src="images/Mobile-calculator-app-theme-2.png" alt=""/>
+    <img src="images/Mobile-calculator-app-theme-3.png" alt=""/>
+  </p>
+</details>
 
 ### Links
 
