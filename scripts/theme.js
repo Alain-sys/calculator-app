@@ -35,6 +35,10 @@ function switchTheme() {
   } else if (localStorage.getItem('switchTheme') === 'radio3') {
     document.querySelector('html').dataset['theme'] = '3';
     radioControl.style.left = '75%';
+    // if the window is under 768px change the style.left to radioControl
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      radioControl.style.left = '74%';
+    }
     radio3.setAttribute('checked', true);
   }
 }

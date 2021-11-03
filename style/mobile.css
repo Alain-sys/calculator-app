@@ -5,25 +5,30 @@
     --fs-previous-operand: 1rem;
     --fs-btn: 1.25rem;
   }
+
+  /****main content****/
   main {
     width: 90%;
     margin: 1.8rem 0 1.8rem 0;
   }
 
+  /****title and theme****/
+  .main-theme-label {
+    width: 62px;
+    padding-right: 6px;
+  }
+
+  .main-theme-output {
+    width: 71px;
+  }
+
+  /****output user****/
   .output {
     min-height: 6rem;
   }
 
+  /****button calculator****/
   .calculator-btn {
     gap: 13px 13px;
-  }
-
-  .main-theme-label {
-    width: 62px;
-    padding-right: 5px;
-  }
-
-  .main-theme-ouput {
-    width: 71px;
   }
 }
